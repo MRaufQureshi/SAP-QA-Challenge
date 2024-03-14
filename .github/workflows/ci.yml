@@ -25,7 +25,7 @@ jobs:
         if: contains(github.event.pull_request.labels.*.name, 'e2e')
         uses: cypress-io/github-action@v5
         with:
-          working-directory: e2e
+          working-directory: ./
           start: yarn cypress run --config-file cypress.config.ts --env baseUrl=$E2E_BASE_URL --env testUser=$TEST_USER --env testPassword=$TEST_PASSWORD --browser ${{ matrix.browser }}
           record: true
         env:
