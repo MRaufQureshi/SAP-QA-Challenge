@@ -6,7 +6,7 @@ export const addressHomeData = {
   state: 'Arizona',
   zip: '95924',
   country: 'United States',
-  phonNumber: '4680211945',
+  phoneNumber: '4680211945',
   mobileNumber: '436943561',
-  additionalInformation: 'Please leave in the letterbox',
+  futureReference: ' letterbox',
 };

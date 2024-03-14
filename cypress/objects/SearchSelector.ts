@@ -1,4 +1,4 @@
-export const Search = {
+export const SearchSelector = {
     searchBar: '#search_query_top',
     iconButtonMagnifyingGlass: '[name="submit_search"]',
 
@@ -11,6 +11,5 @@ export const Search = {
         layerItemCart: '#layer_cart h2:nth-child(2)',
         layerCartProductTitle:'[itemprop="name"] [title="Printed Dress"]',
         buttonProceedToCheckout:'[title="Proceed to checkout"]',
-
     }
 }
