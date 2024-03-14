@@ -31,5 +31,10 @@ declare namespace Cypress {
      * Custom command to make snapshots with full name formed from the test title + suffix easier
      */
     visualSnapshot(maybeName?): Chainable<any>;
+
+    /**
+     * Custom command to select elements
+     */
+    getIframe(): Chainable<JQuery<HTMLElement>>;
   }
 }
