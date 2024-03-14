@@ -18,8 +18,6 @@ export const ShoppingCartSelector = {
     infoMessageSuccess:'.alert-success',
     buttonSaveAddress:'#submitAddress',
     buttonContinue:'[name="processAddress"]',
-
-
 }
 
 export class ShoppingCart{
