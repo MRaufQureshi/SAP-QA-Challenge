@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e848ecbb-46d9-451c-a17f-50dc79d0b1ec" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/fixtures/Fixtures.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/support/commands.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/support/commands.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,9 +35,9 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "02-Cypress-test-case-design-implmentation",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/r_qureshi/Documents/GitHub/SAP-Signavio---QA-Challenge/cypress",
+    "last_opened_file_path": "/Users/r_qureshi/Documents/GitHub/SAP-Signavio---QA-Challenge/cypress/fixtures",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -48,6 +49,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cypress/fixtures" />
       <recent name="$PROJECT_DIR$/cypress" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -64,6 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1710411619519</updated>
       <workItem from="1710412771090" duration="1359000" />
+      <workItem from="1710415036267" duration="926000" />
     </task>
     <servers />
   </component>
