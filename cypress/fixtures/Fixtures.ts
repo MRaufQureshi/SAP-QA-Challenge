@@ -17,9 +17,7 @@ export class Fixtures {
   }
 
   public static clearAddress(flag: boolean) {
-
     cy.get('[title="Addresses"]').click();
-
     cy.get('#center_column').then(($alert) => {
       if ($alert.find('.alert-warning')) {
         cy.get('[title="Delete"]').click({ multiple: true });
@@ -30,8 +28,4 @@ export class Fixtures {
 
     return flag;
   }
-
-
-
-
 }
