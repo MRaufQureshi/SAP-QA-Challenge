@@ -23,3 +23,39 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add(
+    "getBySel",
+    (selector, ...args) => {
+        return cy.get(`${selector}`, ...args);
+    });
+
+Cypress.Commands.add(
+    "login",
+    (username, password, { rememberUser = false } = {}) => {
+        const signinPath = "/";
+        const log = Cypress.log({
+            name: "login",
+            displayName: "LOGIN",
+            message: [`🔐 Authenticating | ${username}`],
+            autoEnd: false,
+        });
+
+        cy.location("pathname", { log: false }).then((currentPath) => {
+            if (currentPath !== signinPath) {
+                cy.visit(signinPath);
+            }
+        });
+
+        log.snapshot("before");
+
+        cy.getBySel("#user-name").type(username);
+        cy.getBySel("#password").type(password);
+        cy.getBySel("#login-button").click();
+    })
+
+Cypress.Commands.add(
+    'logoutViaUI',
+    () => {
+        cy.getBySel('/*pageObject_here*').click()
+    })
