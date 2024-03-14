@@ -89,3 +89,17 @@
 - [ ] Verify increase in quantity of product in cart
 - [ ] Verify reduction of quantity of product in cart
 
+
+## 01-Search engine validation
+
+<br>
+
+|   | Elements             | Description                                                                                                                        |
+|:--| :------------------- |:-----------------------------------------------------------------------------------------------------------------------------------|
+| 1 | **ID:**              | _001-TC_                                                                                                                           |
+| 2 | **Title:**           | _Search engine validation_                                                                                                         |
+| 3 | **Preconditions:**   | _- The **automationpractice.pl** application is working properly_                                                                  |
+| 4 | **Steps:**           | _1. Click inside `Search` field <br> 2. Type `Dress` as input text_  <br> 3. Select first option from the dropdown list            |
+| 5 | **Expected Result:** | _When user input text in seach field and selects a value from dropdown then user should be redirected to the product variant page_ |
+| 6 | **Execution:**       | _Manual and Automated_                                                                                                             
+
