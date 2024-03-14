@@ -33,7 +33,7 @@ export default defineConfig({
 
   env: {
     test_user: process.env.TEST_USER,
-    test_password: process.env.TEST_PWD,
+    test_password: process.env.TEST_PASSWORD,
     e2e_base_url: process.env.E2E_BASE_URL,
   }
 })
