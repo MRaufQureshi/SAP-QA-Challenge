@@ -1,0 +1,52 @@
+name: End-to-end tests
+on:
+  pull_request:
+    types: [labeled]
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        browser: [chrome, firefox, edge]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      # Set environment variables
+      - name: Set environment variables
+        run: |
+          echo "E2E_BASE_URL=${{ secrets.E2E_BASE_URL }}" >> $GITHUB_ENV
+          echo "TEST_USER=${{ secrets.TEST_USER }}" >> $GITHUB_ENV
+          echo "TEST_PASSWORD=${{ secrets.TEST_PASSWORD }}" >> $GITHUB_ENV
+
+      # Install NPM dependencies, cache them correctly
+      # Run Cypress tests if the PR has a specific label
+      - name: Cypress run test on
+        if: contains(github.event.pull_request.labels.*.name, 'e2e')
+        uses: cypress-io/github-action@v5
+        with:
+          working-directory: ./
+          start: yarn cypress run --config-file cypress.config.ts --env baseUrl=$E2E_BASE_URL --env testUser=$TEST_USER --env testPassword=$TEST_PASSWORD --browser ${{ matrix.browser }}
+          record: true
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # After the test run completes
+      # store videos and any screenshots
+      # NOTE: screenshots will be generated only if E2E test failed
+      # thus we store screenshots only on failures
+      # Alternative: create and commit an empty cypress/screenshots folder
+      # to always have something to upload
+      - uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: e2e/cypress/screenshots
+
+      # Test run video was always captured, so this action uses "always()" condition
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: cypress-videos
+          path: e2e/cypress/screenshots
