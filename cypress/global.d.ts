@@ -31,11 +31,5 @@ declare namespace Cypress {
      * Custom command to make snapshots with full name formed from the test title + suffix easier
      */
     visualSnapshot(maybeName?): Chainable<any>;
-
-    /**
-     * Logs-in user by using API request
-     * loginByApi(username: string, password?: string): Chainable<Response>;
-     */
-
   }
 }
