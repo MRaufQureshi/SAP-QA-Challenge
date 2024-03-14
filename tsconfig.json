@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "moduleResolution": "node",
+      "baseUrl": "http://www.automationpractice.pl/index.php",
+      "allowSyntheticDefaultImports": true,
+      "target": "es6",
+      "module": "commonjs",
+      "lib": ["es6", "dom"],
+      "types": ["cypress", "node"]
+    },
+  "include": ["**/*.ts"]
+}
