@@ -7,8 +7,8 @@ dotenv.config();
 
 export default defineConfig({
   chromeWebSecurity: false,
-  requestTimeout: 60000,
-  defaultCommandTimeout: 20000,
+  requestTimeout: 4000,
+  defaultCommandTimeout: 4000,
   projectId: 'c4uh3c',
   viewportWidth: 1280,
   viewportHeight: 800,
@@ -33,6 +33,7 @@ export default defineConfig({
 
   env: {
     test_user: process.env.TEST_USER,
+    test_password: process.env.TEST_PWD,
     e2e_base_url: process.env.E2E_BASE_URL,
   }
 })
