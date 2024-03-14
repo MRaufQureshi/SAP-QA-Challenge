@@ -24,6 +24,8 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+import {SearchSelector} from "../objects/SearchSelector";
+
 Cypress.Commands.add(
     "getBySel",
     (selector, ...args) => {
@@ -48,14 +50,24 @@ Cypress.Commands.add(
         });
 
         log.snapshot("before");
-
-        cy.getBySel("#user-name").type(username);
-        cy.getBySel("#password").type(password);
-        cy.getBySel("#login-button").click();
+        cy.getBySel('.login').click()
+        cy.getBySel("#email").type(username);
+        cy.getBySel("#passwd").type(password);
+        cy.getBySel("#SubmitLogin").click();
     })
 
 Cypress.Commands.add(
     'logoutViaUI',
     () => {
-        cy.getBySel('/*pageObject_here*').click()
+        cy.getBySel('.logout').click()
     })
+
+Cypress.Commands.add('getIframe',() => {
+    let $body
+    return cy.get(SearchSelector.productGrid.productIframe)
+        .should('be.visible')
+        .then(($iframe) => {
+            $body = $iframe.contents().find('body')
+            cy.wrap($body)
+        })
+})
