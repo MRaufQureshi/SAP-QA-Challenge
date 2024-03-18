@@ -2,7 +2,8 @@
 
 ### Introduction
 
-Test cases are written using Cypress Framework with Typescript and CI-CD over Github actions for QA-Challenge website which had test task defined in the pdf
+- Test cases are written using Cypress Framework with Typescript and CI-CD over Github actions for QA-Challenge website which had test task defined in the pdf
+- *Manual test cases* and *acceptance criteria* are present in [here](https://github.com/MRaufQureshi/SAP-Signavio---QA-Challenge/blob/main/cypress/list-test-cases.md)
 
 ---
 
@@ -26,7 +27,8 @@ yml file has been added and github actions are running successfully with label `
 
 1. The duration required to complete the coding assignment exceeded the timeframe specified in the provided PDF document, which was allotted for 2 to 3 hours.
 2. It's evident that the complexity of the task extends beyond the given time constraints. However, despite this challenge, I diligently endeavored to accomplish as much as feasibly possible within the timeframe.
-3. Furthermore, I would like to draw attention to the fact that the acceptance criteria and test cases are contained within the file named "list-test-cases.md." I encourage you to review these documents for comprehensive understanding and evaluation.
+3. Furthermore, again, I would like to draw attention to the fact that the acceptance criteria and test cases are contained within the file named [list-test-cases.md](https://github.com/MRaufQureshi/SAP-Signavio---QA-Challenge/blob/main/cypress/list-test-cases.md). I encourage you to review these documents for comprehensive understanding and evaluation.
+4. The pull request requires label `e2e` to be added to execute end to end test cases in CI. 
 
 **1. 01-Search.spec.ts**
 
