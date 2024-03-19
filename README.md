@@ -30,7 +30,10 @@ yml file has been added and github actions are running successfully with label `
 3. Furthermore, again, I would like to draw attention to the fact that the acceptance criteria and test cases are contained within the file named [list-test-cases.md](https://github.com/MRaufQureshi/SAP-Signavio---QA-Challenge/blob/main/cypress/list-test-cases.md). I encourage you to review these documents for comprehensive understanding and evaluation.
 4. The pull request requires label `e2e` to be added to execute end to end test cases in CI. 
 
-**1. 01-Search.spec.ts**
+
+***File information***
+
+**01-Search.spec.ts**
 
 The script assesses the website's landing page and go through different search and product related test cases
 
