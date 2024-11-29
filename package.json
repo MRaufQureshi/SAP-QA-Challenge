@@ -8,12 +8,22 @@
     "cypress": "^13.6.4",
     "cypress-iframe": "^1.0.1",
     "dotenv": "16.0.0",
-    "typescript": "^4.0.3"
+    "typescript": "^4.0.3",
+    "@typescript-eslint/eslint-plugin": "^8.15.0",
+    "@typescript-eslint/parser": "^8.15.0",
+    "electron": "^23.1.4",
+    "eslint": "^9.15.0",
+    "eslint-plugin-jsdoc": "^50.6.0",
+    "eslint-plugin-jsonc": "^2.18.2",
+    "eslint-plugin-playwright": "^2.1.0",
+    "ts-node": "^10.9.2"
   },
   "scripts": {
     "test": "cypress open",
     "headless": "cypress run --no-runner-ui",
-    "lint": "tsc --noEmit --pretty --allowJs cypress/**/*.js"
+    "lint": "eslint '**/*.{js,ts,mjs,cjs}'",
+    "lint:fix": "eslint '**/*.{js,ts,mjs,cjs}' --fix",
+    "format": "prettier --write ."
   },
   "author": "@M.Rauf Qureshi",
   "license": "CC0-1.0"
